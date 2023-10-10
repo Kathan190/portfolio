@@ -86,3 +86,9 @@ h4 {
     background-color: black;
     border: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
