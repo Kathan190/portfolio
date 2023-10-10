@@ -65,7 +65,7 @@
         </div>
     </main>
     <!-- main section code end -->
-
+    <hr>
     <!-- experience section code start -->
     <section class="s2">
         <div class="main-container">
@@ -117,7 +117,8 @@
             <a href=""></a>
             <h3 style="text-align: center;">Get In Touch</h3>
 
-            <form id="contact-form">
+            <form id="contact-form" method="post" action="/">
+                {% csrf_token %}
                 <a name="contact"></a>
 
                 <label>Name</label>
@@ -135,6 +136,14 @@
                 <input id="submit-btn" type="submit" value="Send">
             </form>
         </div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show container" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
     </section> 
     <!-- Contact section code end -->
 
