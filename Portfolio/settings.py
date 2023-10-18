@@ -26,6 +26,7 @@ SECRET_KEY = 'lw8+gr%7cz+p+iqneo$%57rt+-m-l$qq#7cz3$kn1c%tk54*$*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
